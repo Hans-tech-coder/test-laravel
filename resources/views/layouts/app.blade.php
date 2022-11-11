@@ -22,7 +22,8 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
-                    LOGO
+                    <div><img src="/svg/Wall-E_180x180.png" style="max-height: 100px;" alt="LOGO"></div>
+                    <div style="text-align: center">WALL-E</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
