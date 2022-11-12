@@ -20,10 +20,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
-                    <div><img src="/svg/Wall-E_180x180.png" style="max-height: 100px;" alt="LOGO"></div>
-                    <div style="text-align: center">WALL-E</div>
+                    <div><img src="/svg/Wall-E_180x180.png" style="height: 80px; width: 80px; border-right: 2px solid #333" alt="LOGO"></div>
+                    <div style="display: flex; font-size: 36px; align-items: center; padding: 15px;"><strong>WALL-E</strong></div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
