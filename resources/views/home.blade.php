@@ -24,7 +24,7 @@
             <img src="/images/69251953_415623215971423_6357224280152866816_n.jpg" class="rounded-circle" style="height: 200px; width: 200px;" alt="DogPhoto">           
         </div>
         <div class="col-9 pt-5">
-                <div style="width: 300px;">
+                <div style="width: 210px;">
                     <h1>Hans Obena</h1>
                 </div>
                 <div class="d-flex">
@@ -32,6 +32,17 @@
                     <div style="padding-right: 4%"><strong>200</strong> followers</div>
                     <div style="padding-right: 4%"><strong>200</strong> following</div>
                 </div>
+                <div class="pt-4" style="font-weight: bold;"><a href="">User Title</a></div>
+                <div><a href="">User Description</a></div>
+                <div><a href="">Website URL</a></div>
+            </div>
+            <div class="row">
+                <div class="col-4"><img src="https://source.unsplash.com/1600x900/?computers
+" alt=""></div>
+                <div class="col-4"><img src="https://source.unsplash.com/1600x900/?langscape
+" alt=""></div>
+                <div class="col-4"><img src="https://source.unsplash.com/1600x900/?forest
+" alt=""></div>
             </div>
     </div>
 </div>
