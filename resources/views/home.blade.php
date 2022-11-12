@@ -37,11 +37,11 @@
                 <div><a href="">Website URL</a></div>
             </div>
             <div class="row">
-                <div class="col-4"><img src="https://source.unsplash.com/1600x900/?computers
+                <div class="col-4"><img class="w-100" src="https://source.unsplash.com/1600x900/?computers
 " alt=""></div>
-                <div class="col-4"><img src="https://source.unsplash.com/1600x900/?langscape
+                <div class="col-4"><img class="w-100" src="https://source.unsplash.com/1600x900/?langscape
 " alt=""></div>
-                <div class="col-4"><img src="https://source.unsplash.com/1600x900/?forest
+                <div class="col-4"><img class="w-100" src="https://source.unsplash.com/1600x900/?forest
 " alt=""></div>
             </div>
     </div>
