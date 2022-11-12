@@ -26,7 +26,7 @@
         <div class="col-9 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
-                    <a href="#" class="btn btn-primary"> Add New Post</a>
+                    <a href="/p/create" class="btn btn-primary"> Add New Post</a>
                     
                 </div>
                
