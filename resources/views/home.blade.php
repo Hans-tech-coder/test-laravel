@@ -25,7 +25,7 @@
         </div>
         <div class="col-9 pt-5">
                 <div style="width: 210px;">
-                    <h1>Hans Obena</h1>
+                    <h1>{{ $user->username }}</h1>
                 </div>
                 <div class="d-flex">
                     <div style="padding-right: 4%"><strong>100</strong> posts</div>
