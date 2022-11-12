@@ -32,9 +32,9 @@
                     <div style="padding-right: 4%"><strong>200</strong> followers</div>
                     <div style="padding-right: 4%"><strong>200</strong> following</div>
                 </div>
-                <div class="pt-4" style="font-weight: bold;"><a href="">User Title</a></div>
-                <div><a href="">User Description</a></div>
-                <div><a href="">Website URL</a></div>
+                <div class="pt-4" style="font-weight: bold;">{{$user->profile->title}}</div>
+                <div>{{$user->profile->description}}</div>
+                <div><a href="#">{{$user->profile->url}}</a></div>
             </div>
             <div class="row">
                 <div class="col-4"><img class="w-100 pt-5" src="https://source.unsplash.com/1600x900/?computers
