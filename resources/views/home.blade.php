@@ -36,6 +36,7 @@
                 <div>{{$user->profile->description}}</div>
                 <div><a href="#">{{$user->profile->url}}</a></div>
             </div>
+            
             <div class="row">
                 <div class="col-4"><img class="w-100 pt-5" src="https://source.unsplash.com/1600x900/?computers
 " alt=""></div>
