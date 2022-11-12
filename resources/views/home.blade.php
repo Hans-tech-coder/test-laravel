@@ -26,6 +26,7 @@
         <div class="col-9 pt-5">
                 <div style="width: 210px;">
                     <h1>{{ $user->username }}</h1>
+                    <a href="#" class="btn btn-primary"> Add New Post</a>
                 </div>
                 <div class="d-flex">
                     <div style="padding-right: 4%"><strong>100</strong> posts</div>
