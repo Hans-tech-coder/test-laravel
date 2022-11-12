@@ -24,10 +24,12 @@
             <img src="/images/69251953_415623215971423_6357224280152866816_n.jpg" class="rounded-circle" style="height: 200px; width: 200px;" alt="DogPhoto">           
         </div>
         <div class="col-9 pt-5">
-                <div style="width: 210px;">
+                <div class="d-flex justify-content-between align-items-baseline">
                     <h1>{{ $user->username }}</h1>
                     <a href="#" class="btn btn-primary"> Add New Post</a>
+                    
                 </div>
+               
                 <div class="d-flex">
                     <div style="padding-right: 4%"><strong>100</strong> posts</div>
                     <div style="padding-right: 4%"><strong>200</strong> followers</div>
