@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id(); 
+            $table->unsignedBigInteger('user_id'); // foreign key 
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('url')->nullable();                                                
             $table->timestamps();
+
+            $table->index('user_id'); // better searchability and quicker querries
         });
     }
 
