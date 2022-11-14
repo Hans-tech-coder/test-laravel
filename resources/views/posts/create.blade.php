@@ -2,7 +2,8 @@
 
 @section('content')
 <div class="container">
-  <form action="">
+  <form action="/p" enctype="multipart/form-data" method="post">
+    @csrf
   <div class="row">
       <div class="col-8 offset-2">
         <div class="row">
@@ -26,13 +27,13 @@
           <label for="image" class="col-md-4 col-form-label">Post Image</label>
           <input type="file" class="form-control-file" id="image" name="image">
           @error('image')
-              <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-              </span>
+             
+                <strong>{{ $errors->first('image') }}</strong>
+             
           @enderror
         </div>
         <div class="row pt-4 col-md-3">
-          <button type="button" class="btn btn-primary">Add New Post</button>
+          <button class="btn btn-primary">Add New Post</button>
         </div>
       </div>
     </div>
