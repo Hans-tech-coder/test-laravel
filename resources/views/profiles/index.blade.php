@@ -15,7 +15,7 @@
                 </div>
                
                 <div class="d-flex">
-                    <div style="padding-right: 4%"><strong>100</strong> posts</div>
+                    <div style="padding-right: 4%"><strong>{{ $user->posts->count()}}</strong> posts</div>
                     <div style="padding-right: 4%"><strong>200</strong> followers</div>
                     <div style="padding-right: 4%"><strong>200</strong> following</div>
                 </div>
