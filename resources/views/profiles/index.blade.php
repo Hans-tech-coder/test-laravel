@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    </div> -->
+    </div> 
     <div class="row">
         <div class="col-3 p-5">
             <img src="/images/69251953_415623215971423_6357224280152866816_n.jpg" class="rounded-circle" style="height: 200px; width: 200px;" alt="DogPhoto">           
@@ -26,12 +26,11 @@
 
             
               <div class="row">
-                <!-- <div class="col-4"><img class="w-100 pt-5" src="/storage/{{$post->image}}"></div> -->
-                @foreach($user->posts as $post)
-                  <div class="col-4"><img class="w-100 pt-5" src="/storage/{{$post->image}}"></div>
-                @endforeach
                
-            </div>
+               @foreach($user->posts as $post)
+               <div class="col-4"><img class="w-100 pt-5" src="/storage/{{$post->image}}" alt=""></div>
+               @endforeach
+             </div>
            <!--  <div class="row">
                 <div class="col-4"><img class="w-100 pt-5" src="https://source.unsplash.com/1600x900/?computers
 " alt=""></div>
