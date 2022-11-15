@@ -22,9 +22,14 @@ class PostsController extends Controller
             'image' => ['required','image']
         ]);
 
+        $imagePath = (request('image')->store('uploads', 'public'));    
+
         
-       dd(request('image')->store('uploads', 'public'));
-        auth()->user()->posts()->create($data);
-        dd(request()->all);
+        auth()->user()->posts()->create([
+            'caption' => $data['caption'],
+            'image' => $imagePath
+        ]);
+        //dd(request()->all);
+        return redirect('/profile/' . auth()->user()->id);
     }
 }

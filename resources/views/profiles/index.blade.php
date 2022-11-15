@@ -23,15 +23,23 @@
                 <div>{{$user->profile->description}}</div>
                 <div><a href="#">{{$user->profile->url}}</a></div>
             </div>
+
             
-            <div class="row">
+              <div class="row">
+                <!-- <div class="col-4"><img class="w-100 pt-5" src="/storage/{{$post->image}}"></div> -->
+                @foreach($user->posts as $post)
+                  <div class="col-4"><img class="w-100 pt-5" src="/storage/{{$post->image}}"></div>
+                @endforeach
+               
+            </div>
+           <!--  <div class="row">
                 <div class="col-4"><img class="w-100 pt-5" src="https://source.unsplash.com/1600x900/?computers
 " alt=""></div>
                 <div class="col-4"><img class="w-100 pt-5" src="https://source.unsplash.com/1600x900/?langscape
 " alt=""></div>
                 <div class="col-4"><img class="w-100 pt-5" src="https://source.unsplash.com/1600x900/?forest
 " alt=""></div>
-            </div>
+            </div> -->
     </div>
 </div>
 @endsection
