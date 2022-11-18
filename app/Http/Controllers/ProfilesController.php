@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
-    public function index($user)
+    public function index(User $user)
     {
         /* $user = User::findOrFail($user);
         return view('profiles.index', [
             'user' => $user,
-        ]); */
+        ]); */ 
 
         return view('profiles.index', compact('user'));
     }
@@ -22,7 +22,7 @@ class ProfilesController extends Controller
         return view('profiles.edit', compact('user'));
     }
 
-    public function update()
+    public function update(User $user)
     {
         $data  = request()->validate([
             'title' => 'required',
@@ -30,7 +30,8 @@ class ProfilesController extends Controller
             'url' => 'url',
             'image' => '',
         ]);
-
+        $user->profile->update($data);
         //dd($data);
+        return redirect("/profile/{$user->id}");
     }
 }
