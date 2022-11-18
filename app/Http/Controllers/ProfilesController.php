@@ -30,7 +30,7 @@ class ProfilesController extends Controller
             'url' => 'url',
             'image' => '',
         ]);
-        $user->profile->update($data);
+        auth()->$user->profile->update($data);
         //dd($data);
         return redirect("/profile/{$user->id}");
     }
