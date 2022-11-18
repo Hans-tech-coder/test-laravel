@@ -30,7 +30,8 @@ class ProfilePolicy
      */
     public function view(User $user, Profile $profile)
     {
-        //
+        // if True inside inside this code block then...
+        // if False inside this code block then....
     }
 
     /**
@@ -54,6 +55,7 @@ class ProfilePolicy
     public function update(User $user, Profile $profile)
     {
         //
+        return $user->id == $profile->user_id;
     }
 
     /**
