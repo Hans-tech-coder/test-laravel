@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-3 p-5">
             <!-- <img src="/images/69251953_415623215971423_6357224280152866816_n.jpg" class="rounded-circle" style="height: 200px; width: 200px;" alt="DogPhoto">            -->
-            <img src="/storage/{{ $user->profile->image }}" class="rounded-circle" style="height: 200px; width: 200px;" alt="DogPhoto">           
+            <img src="{{$user->profile->profileImage()}}" class="rounded-circle" style="height: 200px; width: 200px;" alt="profileImage">           
         </div>
         <div class="col-9 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
