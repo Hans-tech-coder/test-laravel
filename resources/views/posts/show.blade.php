@@ -13,11 +13,23 @@
 
 
        <div class="d-flex align-items-center">
-         <div style="padding-right: 15px;"><img src="/storage/{{$post->user->profile->image}}" alt="profile image" class="w-100 rounded-circle" style="max-width: 50px"></div>
-         <div><div style="font-weight: bold">{{ $post->user->username }}</div></div>
+         <div style="padding-right: 15px;">
+            <img src="/storage/{{$post->user->profile->image}}" 
+                alt="profile image" 
+                class="w-100 rounded-circle" 
+                style="max-width: 50px">
+         </div>
+         <div>
+            <div style="font-weight: 700">{{ $post->user->username }}</div>
+         </div>
        </div>
        <hr>
-       <p>{{ $post->caption }}</p>
+       <p>
+          <a href="/profile/{{ $post->user->id }}">
+            <span style="font-weight: 700">{{ $post->user->username }}</span>
+          </a> 
+          {{ $post->caption }}
+       </p>
     </div>
   </div>
   
