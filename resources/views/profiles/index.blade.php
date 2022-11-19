@@ -10,9 +10,10 @@
         </div>
         <div class="col-9 pt-5">
                 <div class="d-flex justify-content-between align-items-baseline">
-                    <div class="d-flex">
-                        <div class="h3">{{ $user->username }}</div>
-                        <button class="btn btn-primary" style="margin-left:10px">Follow</button>
+                    <div class="d-flex align-items-center pb-3">
+                        <div class="h3 ">{{ $user->username }}</div>
+                        <!-- <button class="btn btn-primary" style="margin-left:10px">Follow</button> -->
+                        <follow-button></follow-button>
                     </div>
                     
                     @can('update', $user->profile)
@@ -23,7 +24,7 @@
                 @can('update', $user->profile)
                     <a href="/profile/{{$user->id}}/edit"  class="btn btn-primary">Edit Profile</a> 
                 @endcan
-                <div class="d-flex">
+                <div class="d-flex pt-3">
                     <div style="padding-right: 4%"><strong>{{ $user->posts->count()}}</strong> posts</div>
                     <div style="padding-right: 4%"><strong>200</strong> followers</div>
                     <div style="padding-right: 4%"><strong>200</strong> following</div>

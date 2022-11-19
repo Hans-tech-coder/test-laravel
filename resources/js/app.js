@@ -5,7 +5,7 @@
  */
 
 import './bootstrap';
-import { createApp } from 'vue';
+import { createApp, VueElement } from 'vue';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -15,8 +15,15 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
+/* import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
+ */
+
+import FollowButton from './components/FollowButton.vue';
+app.component('follow-button', FollowButton);
+
+
+//Vue.component('example-component', require('./components/ExampleComponent.vue').default); // laravel 8 format
 
 /**
  * The following block of code may be used to automatically register your
