@@ -35,12 +35,13 @@ class ProfilesController extends Controller
       
         
 
-        if('image'){
+        if(request('image')){
             $imagePath = (request('image')->store('profile', 'public'));  // public driver 
           
 
             $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000,1000);
             $image->save();
+            $imageArray = ['image' => $imagePath];
         }
 
      /*    dd(array_merge(
@@ -49,7 +50,8 @@ class ProfilesController extends Controller
         )); */
         auth()->user()->profile->update(array_merge(
             $data,
-            ['image' => $imagePath]
+            // ['image' => $imagePath ?? null]  this will be deleting our profile image
+            $imageArray ?? [] // we dont override anythin in our data
         ));
 
         return redirect("/profile/{$user->id}");
