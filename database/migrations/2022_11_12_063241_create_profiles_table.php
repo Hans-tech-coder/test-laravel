@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id'); // foreign key 
             $table->string('title')->nullable();
             $table->text('description')->nullable();
-            $table->string('url')->nullable();                                                
+            $table->string('url')->nullable();  
+            $table->string('image')->nullable();                                              
             $table->timestamps();
 
             $table->index('user_id'); // better searchability and quicker querries
