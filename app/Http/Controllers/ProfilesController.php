@@ -57,3 +57,9 @@ class ProfilesController extends Controller
         return redirect("/profile/{$user->id}");
     }
 }
+
+
+
+
+
+
