@@ -17,7 +17,7 @@
                 </div>
                 <!-- BLADE DIRECTIVE -->
                 @can('update', $user->profile)
-                    <a href="/profile/{{$user->id}}/edit">Edit Profile</a> 
+                    <a href="/profile/{{$user->id}}/edit"  class="btn btn-primary">Edit Profile</a> 
                 @endcan
                 <div class="d-flex">
                     <div style="padding-right: 4%"><strong>{{ $user->posts->count()}}</strong> posts</div>

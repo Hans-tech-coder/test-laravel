@@ -39,7 +39,7 @@ class ProfilesController extends Controller
             $imagePath = (request('image')->store('profile', 'public'));  // public driver 
           
 
-            $image = Image::make(public_path("/storage/{$imagePath}"))->fit(1000,1000);
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000,1000);
             $image->save();
         }
 
