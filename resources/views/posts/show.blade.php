@@ -20,13 +20,13 @@
                 style="max-width: 50px">
          </div>
          <div>
-            <div style="font-weight: 700">{{ $post->user->username }}</div>
+            <div style="font-weight: 700"><a style="text-decoration:none;" href="/profile/{{ $post->user->id }}"> <span class="text-dark" style="font-weight: 700">{{ $post->user->username }}</span></a></div>
          </div>
        </div>
        <hr>
        <p>
-          <a href="/profile/{{ $post->user->id }}">
-            <span style="font-weight: 700">{{ $post->user->username }}</span>
+          <a style="text-decoration:none;" href="/profile/{{ $post->user->id }}">
+            <span class="text-dark" style="font-weight: 700">{{ $post->user->username }}</span>
           </a> 
           {{ $post->caption }}
        </p>
