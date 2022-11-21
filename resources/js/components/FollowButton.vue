@@ -16,9 +16,9 @@
         data: function (){
           return {
             status: this.follows,
-          }
-        },
-
+          } // end of return statement
+        }, // end of data anonymous function
+ 
         methods: {
           followUser(){
             //alert("This is just a test for the Follow Button Component!!! If its working!!");
@@ -26,15 +26,15 @@
               //alert(response.data);
               this.status = ! this.status;
               console.log(response.data);
-            });
-          }
+            }); // end of axios post method 
+          } 
         
-        },
+        }, 
 
         computed: {
           buttonText(){
             return (this.status) ? 'Unfollow' : 'Follow';
-          }
-        }
+          }// end of buttonText method 
+        }// end fo computed object
     }
 </script>
