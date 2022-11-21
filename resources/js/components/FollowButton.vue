@@ -16,7 +16,8 @@
           followUser(){
             alert("This is just a test for the Follow Button Component!!! If its working!!");
             axios.post('/follow/' + this.userId).then(response => {
-              alert(response.data);
+              //alert(response.data);
+              console.log(response.data);
             });
           }
         
