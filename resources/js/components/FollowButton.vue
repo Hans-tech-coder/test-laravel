@@ -26,9 +26,12 @@
               //alert(response.data);
               this.status = ! this.status;
               console.log(response.data);
-            }); // end of axios post method 
+            }).catch(errors => {
+              if(errors.response.status == 401){
+                window.location = '/login';
+              }
+            })
           } 
-        
         }, 
 
         computed: {

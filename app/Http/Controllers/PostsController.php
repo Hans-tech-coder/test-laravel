@@ -9,9 +9,19 @@ use Intervention\Image\Facades\Image;
 class PostsController extends Controller
 {
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth');
     }
+
+    public function index()
+    {
+       $users = auth()->user()->following()->pluck('profiles.user_id');
+       dd($users);
+    }
+
+
+
     public function create()
     {
         return view('posts.create');
