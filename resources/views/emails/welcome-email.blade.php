@@ -1,11 +1,13 @@
 <x-mail::message>
-# Introduction
+# Welcome to Hans Obena Laravel Full Stack Website 
 
-The body of your message.
+## Enjoy!
 
-<x-mail::button :url="''">
+This is a healthy community from where you can learn web development.
+
+<!-- <x-mail::button :url="''">
 Button Text
-</x-mail::button>
+</x-mail::button> -->
 
 Thanks,<br>
 {{ config('app.name') }}
