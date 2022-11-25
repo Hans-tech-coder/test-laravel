@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User; 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Intervention\Image\Facades\Image;
 
 class ProfilesController extends Controller
@@ -12,9 +13,32 @@ class ProfilesController extends Controller
     {
         $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
 
-         //dd($follows);
+        /*  $postCount = $user->posts->count();
+         $followersCount = $user->profile->followers->count();
+         $followingCount = $user->following->count(); */
+            // We will need to have a key setup cache key 
+        $postCount = Cache::remember(
+            'count.posts.' . $user->id, // cache key 
+            now()->addSeconds(30), // we just want to store for 30seconds, if not we run the callback function 
+            function () use($user) { //call back function 
+                return $user->posts->count();
+            });
 
-        return view('profiles.index', compact('user', 'follows'));
+
+        $followersCount = Cache::remember(
+            'count.followers.' . $user->id,
+            now()->addSeconds(30), 
+            function () use($user) {
+                return $user->profile->followers->count();
+             });
+         
+        $followingCount = Cache::remember(
+            'count.following.' . $user->id,
+            now()->addSeconds(30), 
+            function () use($user) {
+                return   $user->following->count();
+             });
+        return view('profiles.index', compact('user', 'follows', 'postCount', 'followersCount', 'followingCount'));
     }
 
     public function edit(User $user)
